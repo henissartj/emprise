@@ -191,16 +191,16 @@ a {
 .hero-actions {
     display: flex;
     flex-wrap: wrap;
-    gap: 0.8rem;
-    margin-bottom: 1.2rem;
+    gap: 0.7rem;
+    margin-bottom: 1.3rem;
 }
 
 .discord-pill {
-    width: 40px;
-    height: 40px;
+    width: 34px;
+    height: 34px;
     border-radius: 999px;
     border: 1px solid var(--accent-soft);
-    background: rgba(88, 101, 242, 0.18);
+    background: radial-gradient(circle at 30% 30%, rgba(88, 101, 242, 0.32), rgba(12, 14, 40, 0.9));
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -209,13 +209,12 @@ a {
 
 .discord-pill:hover {
     border-color: #ffffff;
-    background: rgba(88, 101, 242, 0.32);
+    background: radial-gradient(circle at 30% 30%, rgba(88, 101, 242, 0.5), rgba(10, 12, 36, 0.95));
 }
 
-.discord-icon svg {
-    width: 20px;
-    height: 20px;
-    fill: #ffffff;
+.discord-icon img {
+    width: 18px;
+    height: 18px;
 }
 
 .hero-meta {
