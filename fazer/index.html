@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAZER • #FreeFazer</title>
+    <link rel="icon" type="image/webp" href="../Favicon.webp">
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        body {
+            margin: 0;
+            min-height: 100vh;
+            background: #06060a;
+            color: #f5f5f5;
+        }
+        .fz-hero {
+            position: relative;
+            padding: 5rem 0 3rem;
+            background: radial-gradient(circle at top, rgba(10,10,16,0.96), rgba(3,3,7,0.96));
+            overflow: hidden;
+        }
+        .fz-hero-inner {
+            max-width: 1120px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+            display: grid;
+            grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+            gap: 2.2rem;
+            align-items: center;
+        }
+        .fz-kicker {
+            color: #f43f5e;
+            letter-spacing: .18em;
+            text-transform: uppercase;
+            font-size: .85rem;
+            margin-bottom: .5rem;
+        }
+        .fz-title {
+            font-size: clamp(2.2rem, 4vw, 3rem);
+            line-height: 1.1;
+            margin: 0 0 .7rem;
+        }
+        .fz-sub {
+            color: #d6d6df;
+            margin: 0 0 1.2rem;
+            max-width: 36rem;
+        }
+        .fz-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: .7rem;
+        }
+        .fz-media {
+            display: flex;
+            justify-content: center;
+        }
+        .fz-card {
+            width: 100%;
+            max-width: 360px;
+            border: 1px solid rgba(255,255,255,.12);
+            border-radius: 8px;
+            background: radial-gradient(circle at top left, rgba(28,28,44,.98), rgba(8,8,14,.98));
+            box-shadow: 0 26px 80px rgba(0,0,0,.9);
+            padding: 1.4rem 1.3rem;
+        }
+        .fz-grid {
+            max-width: 1120px;
+            margin: 0 auto;
+            padding: 2.2rem 1.5rem 3.5rem;
+            display: grid;
+            gap: 1.2rem;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+        }
+        .fz-item {
+            border: 1px solid rgba(255,255,255,.12);
+            border-radius: 8px;
+            padding: 1.2rem 1rem;
+            background: linear-gradient(135deg, rgba(18,18,26,.98), rgba(8,8,12,.98));
+        }
+        .fz-item h3 { margin: 0 0 .4rem; font-size: 1rem; }
+        .fz-item p { margin: 0; color: #cfcfe3; font-size: .92rem; }
+        .fz-footer {
+            text-align: center;
+            padding: 1.6rem 1rem 2.2rem;
+            color: #9ea0b8;
+            font-size: .85rem;
+        }
+        @media (max-width: 900px) {
+            .fz-hero-inner { grid-template-columns: minmax(0, 1fr); }
+            .fz-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+        }
+        @media (max-width: 680px) {
+            .fz-grid { grid-template-columns: minmax(0, 1fr); }
+        }
+    </style>
+</head>
+<body>
+    <section class="fz-hero">
+        <div class="fz-hero-inner">
+            <div>
+                <div class="fz-kicker">PDG • #FreeFazer</div>
+                <h1 class="fz-title">FAZER — Direction produit, design et exécution.</h1>
+                <p class="fz-sub">Référence L’EMPRISE pour les projets FAZER. Vision street, prise de décision rapide, livraison mesurable. Pas de blabla, que des livrables nets.</p>
+                <div class="fz-actions">
+                    <a href="../index.html#services" class="btn primary">Voir les services</a>
+                    <a href="https://discord.gg/2CSKcX8T5k" class="btn secondary">Parler à FAZER</a>
+                </div>
+            </div>
+            <div class="fz-media">
+                <div class="fz-card">
+                    <h3>Manifesto</h3>
+                    <p>Simples briques, forte direction artistique, zéro blabla. Conception claire, exécution rapide, déploiement contrôlé.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="fz-grid">
+        <div class="fz-item">
+            <h3>Identité</h3>
+            <p>Charte, logos, assets réseaux, déclinaisons agressives.</p>
+        </div>
+        <div class="fz-item">
+            <h3>Web</h3>
+            <p>Pages rapides, animations sobres, mesure intégrée.</p>
+        </div>
+        <div class="fz-item">
+            <h3>Audio/Visuel</h3>
+            <p>Teasers courts, sonorités, montages percutants.</p>
+        </div>
+    </section>
+    <div class="fz-footer">
+        FAZER x L’EMPRISE — Direction produit et design appliqué.
+    </div>
+</body>
+</html>

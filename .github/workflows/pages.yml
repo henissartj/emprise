@@ -1,0 +1,49 @@
+name: Deploy site to GitHub Pages
+
+on:
+  push:
+    branches: ["main"]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Prepare static artifact
+        run: |
+          set -e
+          mkdir -p dist
+          cp -v index.html style.css Favicon.webp Fichier_5.png Fichier_6.png dist/ || true
+          if [ -d "amel" ]; then cp -rv amel dist/; fi
+          if [ -d "fazer" ]; then cp -rv fazer dist/; fi
+          if [ -d "a7x" ]; then cp -rv a7x dist/; fi
+          # Avoid Jekyll processing and ensure clean static hosting
+          touch dist/.nojekyll
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist
+          if-no-files-found: error
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

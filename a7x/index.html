@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>L'EMPRISE • A7X</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="../Favicon.webp">
+    <link rel="icon" type="image/webp" sizes="32x32" href="../Favicon.webp">
+    <link rel="icon" type="image/webp" sizes="16x16" href="../Favicon.webp">
+    <link rel="icon" type="image/svg+xml" href="../Favicon.webp">
+    <link rel="shortcut icon" href="../Favicon.webp">
+    <meta name="theme-color" content="#0b0b12">
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        body {
+            margin: 0;
+            min-height: 100vh;
+            display: flex;
+            align-items: stretch;
+            justify-content: center;
+            background: #05050a;
+            color: #f5f5f5;
+        }
+
+        .member-page {
+            position: relative;
+            flex: 1;
+            overflow: hidden;
+        }
+
+        .member-overlay {
+            position: relative;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            z-index: 1;
+            background:
+                radial-gradient(circle at top left, rgba(10, 10, 24, 0.9), rgba(3, 3, 8, 0.96));
+        }
+
+        .member-header {
+            border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+            padding: 1rem 0;
+        }
+
+        .member-header-inner {
+            max-width: 1120px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1rem;
+        }
+
+        .member-brand {
+            display: flex;
+            align-items: center;
+            gap: 0.7rem;
+        }
+
+        .member-brand img {
+            width: 34px;
+            height: 34px;
+            border-radius: 10px;
+            object-fit: contain;
+            background: #050509;
+        }
+
+        .member-brand span {
+            font-size: 0.9rem;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+        }
+
+        .member-main {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 3rem 1.5rem;
+        }
+
+        .member-card {
+            width: 100%;
+            max-width: 640px;
+            border-radius: 1.8rem;
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            background:
+                radial-gradient(circle at top left, rgba(31, 31, 58, 0.98), rgba(6, 6, 16, 0.98));
+            box-shadow: 0 26px 80px rgba(0, 0, 0, 0.9);
+            padding: 2.2rem 2.1rem 2.4rem;
+            display: grid;
+            grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr);
+            gap: 1.8rem;
+        }
+
+        .member-card-main h1 {
+            margin: 0 0 0.4rem;
+            font-size: 1.6rem;
+        }
+
+        .member-title {
+            font-size: 0.9rem;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            color: #c0c2ff;
+            margin-bottom: 1rem;
+        }
+
+        .member-bio {
+            margin: 0 0 1.4rem;
+            font-size: 0.95rem;
+            color: #d7d7e6;
+        }
+
+        .member-meta {
+            display: grid;
+            gap: 0.4rem;
+            font-size: 0.85rem;
+            color: #b6b6ce;
+            margin-bottom: 1.4rem;
+        }
+
+        .member-meta span {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+        }
+
+        .member-avatar-block {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 0.9rem;
+        }
+
+        .member-avatar {
+            width: 120px;
+            height: 120px;
+            border-radius: 999px;
+            border: 2px solid rgba(255, 255, 255, 0.36);
+            background: radial-gradient(circle at 30% 30%, rgba(88, 101, 242, 0.6), #050510);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.4rem;
+            font-weight: 600;
+        }
+
+        .member-discord-tag {
+            font-size: 0.9rem;
+            color: #e4e4ff;
+        }
+
+        .member-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.6rem;
+        }
+
+        .member-footer {
+            font-size: 0.78rem;
+            color: #8d8daf;
+            max-width: 640px;
+            margin: 0 auto 1.6rem;
+            padding: 0 1.5rem;
+            text-align: center;
+        }
+
+        @media (max-width: 780px) {
+            .member-card {
+                grid-template-columns: minmax(0, 1fr);
+                padding: 1.8rem 1.5rem 2rem;
+            }
+
+            .member-main {
+                padding-top: 2.4rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="member-page">
+        <div class="member-overlay">
+            <header class="member-header">
+                <div class="member-header-inner">
+                    <a href="../index.html" class="member-brand">
+                        <img src="../discordlogo.webp" alt="Logo L'EMPRISE">
+                        <span>L'EMPRISE</span>
+                    </a>
+                    <a href="https://discord.gg/2CSKcX8T5k" class="btn secondary">Rejoindre le Discord</a>
+                </div>
+            </header>
+            <main class="member-main">
+                <section class="member-card">
+                    <div class="member-card-main">
+                        <div class="member-title">Membre L'EMPRISE</div>
+                        <h1>A7X</h1>
+                        <p class="member-bio">
+                            Membre clé de l’écosystème L'EMPRISE. Travaille sur les projets stratégiques et
+                            garde le focus sur un rendu propre et assumé.
+                        </p>
+                        <div class="member-meta">
+                            <span id="member-discord-id"></span>
+                            <span>Contact via Discord après ouverture de ticket sur le serveur.</span>
+                        </div>
+                        <div class="member-actions">
+                            <a id="member-discord-link" href="#" class="btn primary">Profil Discord</a>
+                            <a href="../index.html#contact" class="btn ghost">Parler d’un projet</a>
+                        </div>
+                    </div>
+                    <div class="member-avatar-block">
+                        <div class="member-avatar">
+                            <span>A7</span>
+                        </div>
+                        <div class="member-discord-tag" id="member-discord-tag"></div>
+                    </div>
+                </section>
+            </main>
+            <div class="member-footer">
+                Page membre L'EMPRISE. Les informations sont synchronisées avec l’identifiant Discord associé et
+                actualisées sur demande.
+            </div>
+        </div>
+    </div>
+    <script>
+        const memberDiscordId = '000000000000000000';
+        const memberDiscordTag = 'A7X';
+        const idSpan = document.getElementById('member-discord-id');
+        const tagSpan = document.getElementById('member-discord-tag');
+        const link = document.getElementById('member-discord-link');
+        if (idSpan) {
+            idSpan.textContent = 'Discord ID : ' + memberDiscordId;
+        }
+        if (tagSpan) {
+            tagSpan.textContent = memberDiscordTag;
+        }
+        if (link) {
+            link.href = 'https://discord.com/users/' + memberDiscordId;
+        }
+    </script>
+</body>
+</html>
